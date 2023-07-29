@@ -14,10 +14,18 @@ const enfant = document.getElementById('enfant');
 // var p = document.createElement("p");
 // document.body.appendChild(p);
 
-const div = document.querySelector('h1');
+// const div = document.querySelector('h1');
 
 // console.log(div);
 
-console.log(div.innerHTML);
-div.innerHTML = 'Hello';
-console.log(div.innerHTML);
+// console.log(div.innerHTML);
+// div.innerHTML = 'Hello';
+// console.log(div.innerHTML);
+
+console.log((document.querySelector('h1')).innerHTML);
+console.log((document.querySelector('h1')).innerHTML = 'Hello');
+
+const h2 = document.getElementById('bonjour');
+console.log(h2.innerHTML);
+
+h2.style.color = 'darkorange';
