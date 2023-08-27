@@ -23,7 +23,7 @@ for (let i = 0; i < pieces.length; i++) {
     // On accède à l’indice i de la liste pieces pour configurer la source de l’image.
     imageElement.src = pieces[i].image;
     // Idem pour le nom, le prix et la catégorie...
-    
+
     // On rattache la balise article à la section Fiches
     sectionFiches.appendChild(pieceElement);
     // On rattache l’image à pieceElement (la balise article)
@@ -34,4 +34,14 @@ for (let i = 0; i < pieces.length; i++) {
     pieceElement.appendChild(descriptionElement);
     pieceElement.appendChild(stockElement);
     // Idem pour le nom, le prix et la catégorie...
-    }
+}
+
+const boutonTrier = document.querySelector(".btn-trier");
+boutonTrier.addEventListener("click", function () {
+    const piecesOrdonnees = Array.from(pieces);
+    piecesOrdonnees.sort(function (a, b) {
+        return a.prix - b.prix;
+     });
+     console.log(piecesOrdonnees);
+ });
+
